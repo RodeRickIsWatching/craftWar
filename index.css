@@ -1,0 +1,108 @@
+/* 基础css */
+:root,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.map-container {
+    position: relative;
+    height: 80vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.controller-container {
+    height: 20vh;
+    background-color: rgba(26, 34, 148, 0.541);
+}
+
+.tips-container {
+    height: 20vh;
+    width: 100vw;
+    font-size: 6vw;
+    user-select: none;
+    text-align: center;
+    line-height: 20vh;
+}
+.tips-container.ready-to-start{
+    animation: tips 800ms linear forwards;
+}
+
+@keyframes tips {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+/* 关键css */
+.plane-bullet-container {
+    position: absolute;
+    bottom: 0px;
+}
+
+.plane {
+    position: fixed;
+    width: 12vw;
+    height: 6vh;
+    top: 77vh;
+    left: 0px;
+    display: none;
+}
+
+.bullet {
+    position: absolute;
+    height: 3.5vh;
+    width: 3vw;
+    border-radius: 50%;
+    background-color: rgba(2, 0, 0, 0.8);
+    left: 0px;
+    top: -30px;
+    transform: translateX(4.5vw);
+    display: none;
+    /* display: inline-block; */
+    /* transition: top 2s linear; */
+}
+
+/* emermy */
+.enermy-item{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.disappear{
+    animation: disappear 50ms linear forwards;
+}
+
+@keyframes disappear{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
